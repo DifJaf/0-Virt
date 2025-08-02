@@ -1,0 +1,13 @@
+name: Deploy to Replit
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Webhook to Replit
+        run: |
+          curl -X POST https://your-replit-username.repl.co/webhook
